@@ -139,8 +139,8 @@ float4 ProtanopeDaltonization(float4 inputErrorRGB)
 {
 	float4 RGBc = float4(0.0f, 0.0f, 0.0f, 1.0f);
 	RGBc.x = -1.0f * inputErrorRGB.x + 0.0f * inputErrorRGB.y + 0.0f * inputErrorRGB.z;
-	RGBc.y = 1.0f * inputErrorRGB.x + 1.0f * inputErrorRGB.y + 0.0f * inputErrorRGB.z;
-	RGBc.z = 1.0f * inputErrorRGB.x + 0.0f * inputErrorRGB.y + 1.0f * inputErrorRGB.z;
+	RGBc.y = 0.5f * inputErrorRGB.x + 1.0f * inputErrorRGB.y + 0.0f * inputErrorRGB.z;
+	RGBc.z = 1.5f * inputErrorRGB.x + 0.0f * inputErrorRGB.y + 1.0f * inputErrorRGB.z;
 	return RGBc;
 }
 
